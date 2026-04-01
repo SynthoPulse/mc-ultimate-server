@@ -1,0 +1,198 @@
+name: Minecraft Server
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: minecraft-server
+  cancel-in-progress: true
+
+jobs:
+  server:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Install Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Install screen
+        run: sudo apt-get install -y screen
+
+      - name: Restore world
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            world
+            world_nether
+            world_the_end
+            banned-players.json
+            banned-ips.json
+            ops.json
+            whitelist.json
+          key: mc-world-save-${{ github.run_number }}
+          restore-keys: |
+            mc-world-save-
+
+      - name: Check world
+        run: |
+          if [ -d "world" ]; then
+            SIZE=$(du -sh world/ | cut -f1)
+            echo "World restored! Size: $SIZE"
+          else
+            echo "No world found. Fresh start."
+          fi
+
+      - name: Install Forge
+        run: |
+          wget -q https://maven.minecraftforge.net/net/minecraftforge/forge/1.19.2-43.5.1/forge-1.19.2-43.5.1-installer.jar
+          java -jar forge-1.19.2-43.5.1-installer.jar --installServer
+          rm forge-1.19.2-43.5.1-installer.jar
+          rm forge-1.19.2-43.5.1-installer.jar.log 2>/dev/null || true
+          echo "eula=true" > eula.txt
+
+      - name: Check mods
+        run: |
+          echo "=== Mods count ==="
+          ls mods/*.jar 2>/dev/null | wc -l
+          echo "=== First 20 mods ==="
+          ls mods/*.jar 2>/dev/null | head -20
+
+      - name: Configure server
+        run: |
+          cat > server.properties << 'EOF'
+          server-port=25565
+          gamemode=survival
+          difficulty=hard
+          max-players=5
+          view-distance=5
+          simulation-distance=5
+          allow-flight=true
+          pvp=false
+          online-mode=false
+          spawn-protection=0
+          enable-command-block=true
+          op-permission-level=4
+          function-permission-level=4
+          motd=SynthoPulse Ultimate Server
+          EOF
+
+      - name: Start Playit
+        env:
+          PLAYIT_SECRET: ${{ secrets.PLAYIT_SECRET }}
+        run: |
+          curl -L -o playit https://github.com/playit-cloud/playit-agent/releases/download/v0.15.26/playit-linux-amd64
+          chmod +x playit
+          echo "secret_key = \"$PLAYIT_SECRET\"" > playit.toml
+          PLAYIT_SECRET_KEY="$PLAYIT_SECRET" ./playit > playit.log 2>&1 &
+          sleep 20
+          cat playit.log | tail -5
+
+      - name: Start Minecraft Server
+        run: |
+          screen -dmS mc java -Xmx5G -Xms4G \
+            -XX:+UseG1GC \
+            -XX:+ParallelRefProcEnabled \
+            -XX:MaxGCPauseMillis=200 \
+            -XX:+UnlockExperimentalVMOptions \
+            -XX:+DisableExplicitGC \
+            -XX:G1NewSizePercent=30 \
+            -XX:G1MaxNewSizePercent=40 \
+            -XX:G1HeapRegionSize=8M \
+            -XX:G1ReservePercent=20 \
+            -XX:InitiatingHeapOccupancyPercent=15 \
+            -XX:G1MixedGCLiveThresholdPercent=90 \
+            -XX:SurvivorRatio=32 \
+            -XX:+PerfDisableSharedMem \
+            -XX:MaxTenuringThreshold=1 \
+            -Dlog4j2.formatMsgNoLookups=true \
+            @libraries/net/minecraftforge/forge/1.19.2-43.5.1/unix_args.txt nogui
+
+          echo "============================================"
+          echo "  Waiting for server to start..."
+          echo "  Ultimate modpack needs 15-25 minutes..."
+          echo "============================================"
+
+          TIMEOUT=1500
+          ELAPSED=0
+          while ! grep -q "Done" logs/latest.log 2>/dev/null; do
+            sleep 20
+            ELAPSED=$((ELAPSED + 20))
+
+            if [ -f "logs/latest.log" ]; then
+              echo "--- [$((ELAPSED/60))m] ---"
+              tail -1 logs/latest.log
+            fi
+
+            if ! screen -list | grep -q mc; then
+              echo "=== SERVER CRASHED ==="
+              if [ -f "logs/latest.log" ]; then
+                tail -80 logs/latest.log
+              fi
+              if [ -d "crash-reports" ]; then
+                cat crash-reports/*.txt 2>/dev/null
+              fi
+              exit 1
+            fi
+
+            if [ $ELAPSED -ge $TIMEOUT ]; then
+              echo "=== TIMEOUT ==="
+              tail -80 logs/latest.log 2>/dev/null
+              exit 1
+            fi
+          done
+
+          echo "========================================="
+          echo "  SERVER IS RUNNING!"
+          echo "  Address: market-needed.gl.joinmc.link"
+          echo "========================================="
+
+          sleep 10
+          screen -S mc -X stuff "op MustafaX$(printf '\r')"
+          sleep 2
+          screen -S mc -X stuff "op muhammad12000$(printf '\r')"
+          sleep 2
+          screen -S mc -X stuff "op AbbasMaster$(printf '\r')"
+
+      - name: Keep Alive and Auto Save
+        run: |
+          TOTAL=0
+          while screen -list | grep -q mc; do
+            sleep 300
+            TOTAL=$((TOTAL + 300))
+            H=$((TOTAL / 3600))
+            M=$(( (TOTAL % 3600) / 60 ))
+            echo "Saving... (${H}h ${M}m)"
+            screen -S mc -X stuff "save-all$(printf '\r')"
+
+            if [ $TOTAL -ge 20400 ]; then
+              echo "Stopping safely..."
+              screen -S mc -X stuff "save-all$(printf '\r')"
+              sleep 15
+              screen -S mc -X stuff "stop$(printf '\r')"
+              sleep 30
+              break
+            fi
+          done
+
+      - name: Save world to cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            world
+            world_nether
+            world_the_end
+            banned-players.json
+            banned-ips.json
+            ops.json
+            whitelist.json
+          key: mc-world-save-${{ github.run_number }}
