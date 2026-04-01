@@ -152,7 +152,7 @@ jobs:
 
           echo "========================================="
           echo "  SERVER IS RUNNING!"
-          echo "  Address: market-needed.gl.joinmc.link"
+          echo "  Address: hard-wrapped.gl.joinmc.link"
           echo "========================================="
 
           sleep 10
