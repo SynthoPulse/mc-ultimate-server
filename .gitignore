@@ -1,0 +1,16 @@
+logs/
+crash-reports/
+world/
+world_nether/
+world_the_end/
+*.log
+eula.txt
+server.properties
+libraries/
+playit
+playit.toml
+playit.log
+forge-*-installer.jar
+run.bat
+run.sh
+user_jvm_args.txt
