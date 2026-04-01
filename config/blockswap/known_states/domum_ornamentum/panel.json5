@@ -1,0 +1,2467 @@
+/*
+This file uses the ".json5" file extension which allows for comments like this in a json file!
+Your text editor may show this file with invalid/no syntax, if so, we recommend you download:
+
+VSCode: https://code.visualstudio.com/
+JSON5 plugin(for VSCode): https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-json5
+
+to make editing this file much easier.
+*/
+[
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "true",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "true",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "true",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "false",
+			"half": "top",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "true",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "false",
+			"half": "bottom",
+			"facing": "north"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "true",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "false",
+			"half": "top",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "true",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "false",
+			"half": "bottom",
+			"facing": "south"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "true",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "false",
+			"half": "top",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "true",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "false",
+			"half": "bottom",
+			"facing": "west"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "true",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "false",
+			"half": "top",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "true",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "full",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "full",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "horizontally_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "port_manteau",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_squiggly_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "vertically_striped",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "true",
+			"type": "waffle",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	},
+	{
+		// Properties define the state of this block/fluid.
+		"Properties": {
+			"waterlogged": "false",
+			"type": "waffle",
+			"open": "false",
+			"half": "bottom",
+			"facing": "east"
+		},
+		"Name": "domum_ornamentum:panel"
+	}
+]
