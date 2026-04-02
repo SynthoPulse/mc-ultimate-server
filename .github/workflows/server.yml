@@ -30,6 +30,8 @@ jobs:
 
       - name: Add SWAP Memory
         run: |
+          sudo swapoff /swapfile 2>/dev/null || true
+          sudo rm -f /swapfile
           sudo fallocate -l 4G /swapfile
           sudo chmod 600 /swapfile
           sudo mkswap /swapfile
@@ -51,25 +53,6 @@ jobs:
           key: mc-world-save-${{ github.run_number }}
           restore-keys: |
             mc-world-save-
-
-      - name: Reset muhammad12000
-        run: |
-          echo "=== Resetting muhammad12000 ==="
-          
-          # احذف ملف playerdata
-          find world/playerdata/ -name "*.dat" -newer /tmp/dummy 2>/dev/null
-          
-          # احذف advancements
-          if [ -d "world/advancements" ]; then
-            ls world/advancements/
-            # سنحذف الملف بعد معرفة UUID
-          fi
-          
-          echo "Files in playerdata:"
-          ls world/playerdata/ 2>/dev/null || echo "No playerdata yet"
-          
-          echo "Files in advancements:"
-          ls world/advancements/ 2>/dev/null || echo "No advancements yet"
 
       - name: Check world
         run: |
@@ -187,7 +170,6 @@ jobs:
           screen -S mc -X stuff "op AbbasMaster$(printf '\r')"
           sleep 10
 
-          # امسح تقدم muhammad12000 من داخل السيرفر
           screen -S mc -X stuff "advancement revoke muhammad12000 everything$(printf '\r')"
           sleep 5
           screen -S mc -X stuff "clear muhammad12000$(printf '\r')"
