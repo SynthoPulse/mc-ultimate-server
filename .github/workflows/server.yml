@@ -100,7 +100,7 @@ jobs:
 
       - name: Start Minecraft Server
         run: |
-          screen -dmS mc java -Xmx6G -Xms2G \
+          screen -dmS mc java -Xmx4G -Xms1G \
             -XX:+UseG1GC \
             -XX:+ParallelRefProcEnabled \
             -XX:MaxGCPauseMillis=200 \
@@ -179,8 +179,8 @@ jobs:
 
           echo "=== SERVER STOPPED ==="
           echo "=== CRASH REPORT ==="
-          cat crash-reports/*.txt 2>/dev/null || echo "No crash report found"
-          echo "=== LAST 50 LINES OF LOG ==="
+          cat crash-reports/*.txt 2>/dev/null || echo "No crash report"
+          echo "=== LAST 50 LINES ==="
           tail -50 logs/latest.log 2>/dev/null
 
       - name: Save world to cache
