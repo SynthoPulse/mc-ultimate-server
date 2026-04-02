@@ -75,8 +75,8 @@ jobs:
           gamemode=survival
           difficulty=hard
           max-players=5
-          view-distance=5
-          simulation-distance=5
+          view-distance=4
+          simulation-distance=4
           allow-flight=true
           pvp=false
           online-mode=false
@@ -100,7 +100,7 @@ jobs:
 
       - name: Start Minecraft Server
         run: |
-          screen -dmS mc java -Xmx5G -Xms4G \
+          screen -dmS mc java -Xmx6G -Xms2G \
             -XX:+UseG1GC \
             -XX:+ParallelRefProcEnabled \
             -XX:MaxGCPauseMillis=200 \
@@ -160,9 +160,6 @@ jobs:
           sleep 10
           screen -S mc -X stuff "op AbbasMaster$(printf '\r')"
           sleep 10
-
-          echo "Checking ops.json..."
-          cat ops.json 2>/dev/null
 
           echo "Sending OP commands again to make sure..."
           screen -S mc -X stuff "op MustafaX$(printf '\r')"
