@@ -150,27 +150,14 @@ jobs:
 
       - name: Give OP and Keep Alive
         run: |
-          echo "Waiting 2 minutes for server to fully load..."
           sleep 120
 
-          echo "Sending OP commands..."
           screen -S mc -X stuff "op MustafaX$(printf '\r')"
           sleep 10
           screen -S mc -X stuff "op muhammad12000$(printf '\r')"
           sleep 10
           screen -S mc -X stuff "op AbbasMaster$(printf '\r')"
           sleep 10
-
-          echo "Sending OP commands again to make sure..."
-          screen -S mc -X stuff "op MustafaX$(printf '\r')"
-          sleep 5
-          screen -S mc -X stuff "op muhammad12000$(printf '\r')"
-          sleep 5
-          screen -S mc -X stuff "op AbbasMaster$(printf '\r')"
-          sleep 5
-
-          echo "=== Final ops.json ==="
-          cat ops.json 2>/dev/null
 
           TOTAL=0
           while screen -list | grep -q mc; do
@@ -189,6 +176,12 @@ jobs:
               break
             fi
           done
+
+          echo "=== SERVER STOPPED ==="
+          echo "=== CRASH REPORT ==="
+          cat crash-reports/*.txt 2>/dev/null || echo "No crash report found"
+          echo "=== LAST 50 LINES OF LOG ==="
+          tail -50 logs/latest.log 2>/dev/null
 
       - name: Save world to cache
         if: always()
