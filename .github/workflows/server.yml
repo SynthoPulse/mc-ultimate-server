@@ -55,11 +55,9 @@ jobs:
       - name: Install Forge
         run: |
           wget -q https://maven.minecraftforge.net/net/minecraftforge/forge/1.19.2-43.5.1/forge-1.19.2-43.5.1-installer.jar
-
           mkdir -p libraries/net/minecraft/server/1.19.2-20220805.130853/
           wget -q -O libraries/net/minecraft/server/1.19.2-20220805.130853/server-1.19.2-20220805.130853.jar \
             https://piston-data.mojang.com/v1/objects/f69c284232d7c7580bd89a5a4931c3581eae1378/server.jar
-
           java -jar forge-1.19.2-43.5.1-installer.jar --installServer
           rm forge-1.19.2-43.5.1-installer.jar
           rm forge-1.19.2-43.5.1-installer.jar.log 2>/dev/null || true
@@ -88,16 +86,6 @@ jobs:
           function-permission-level=4
           motd=SynthoPulse Ultimate Server
           EOF
-
-          mkdir -p kubejs/startup_scripts
-          cat > kubejs/startup_scripts/auto_op.js << 'EOF'
-          onEvent('player.logged_in', event => {
-              event.server.runCommandSilent(`op ${event.player.username}`)
-          })
-          EOF
-
-          echo "=== Auto OP script created ==="
-          cat kubejs/startup_scripts/auto_op.js
 
       - name: Start Playit
         env:
@@ -139,23 +127,15 @@ jobs:
           while ! grep -q "Done (" logs/latest.log 2>/dev/null; do
             sleep 20
             ELAPSED=$((ELAPSED + 20))
-
             if [ -f "logs/latest.log" ]; then
               echo "--- [$((ELAPSED/60))m] ---"
               tail -1 logs/latest.log
             fi
-
             if ! screen -list | grep -q mc; then
               echo "=== SERVER CRASHED ==="
-              if [ -f "logs/latest.log" ]; then
-                tail -80 logs/latest.log
-              fi
-              if [ -d "crash-reports" ]; then
-                cat crash-reports/*.txt 2>/dev/null
-              fi
+              tail -80 logs/latest.log 2>/dev/null
               exit 1
             fi
-
             if [ $ELAPSED -ge $TIMEOUT ]; then
               echo "=== TIMEOUT ==="
               tail -80 logs/latest.log 2>/dev/null
@@ -168,18 +148,33 @@ jobs:
           echo "  Address: hard-wrapped.gl.joinmc.link"
           echo "========================================="
 
-          sleep 30
+      - name: Give OP and Keep Alive
+        run: |
+          echo "Waiting 2 minutes for server to fully load..."
+          sleep 120
+
+          echo "Sending OP commands..."
           screen -S mc -X stuff "op MustafaX$(printf '\r')"
-          sleep 3
+          sleep 10
           screen -S mc -X stuff "op muhammad12000$(printf '\r')"
-          sleep 3
+          sleep 10
           screen -S mc -X stuff "op AbbasMaster$(printf '\r')"
-          sleep 3
-          echo "=== ops.json ==="
+          sleep 10
+
+          echo "Checking ops.json..."
           cat ops.json 2>/dev/null
 
-      - name: Keep Alive and Auto Save
-        run: |
+          echo "Sending OP commands again to make sure..."
+          screen -S mc -X stuff "op MustafaX$(printf '\r')"
+          sleep 5
+          screen -S mc -X stuff "op muhammad12000$(printf '\r')"
+          sleep 5
+          screen -S mc -X stuff "op AbbasMaster$(printf '\r')"
+          sleep 5
+
+          echo "=== Final ops.json ==="
+          cat ops.json 2>/dev/null
+
           TOTAL=0
           while screen -list | grep -q mc; do
             sleep 300
@@ -188,7 +183,6 @@ jobs:
             M=$(( (TOTAL % 3600) / 60 ))
             echo "Saving... (${H}h ${M}m)"
             screen -S mc -X stuff "save-all$(printf '\r')"
-
             if [ $TOTAL -ge 20400 ]; then
               echo "Stopping safely..."
               screen -S mc -X stuff "save-all$(printf '\r')"
