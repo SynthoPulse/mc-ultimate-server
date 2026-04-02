@@ -100,7 +100,7 @@ jobs:
 
       - name: Start Minecraft Server
         run: |
-          screen -dmS mc java -Xmx4G -Xms1G \
+          screen -dmS mc java -Xmx4G -Xms4G \
             -XX:+UseG1GC \
             -XX:+ParallelRefProcEnabled \
             -XX:MaxGCPauseMillis=200 \
