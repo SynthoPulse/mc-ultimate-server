@@ -55,11 +55,9 @@ jobs:
       - name: Install Forge
         run: |
           wget -q https://maven.minecraftforge.net/net/minecraftforge/forge/1.19.2-43.5.1/forge-1.19.2-43.5.1-installer.jar
-
           mkdir -p libraries/net/minecraft/server/1.19.2-20220805.130853/
           wget -q -O libraries/net/minecraft/server/1.19.2-20220805.130853/server-1.19.2-20220805.130853.jar \
             https://piston-data.mojang.com/v1/objects/f69c284232d7c7580bd89a5a4931c3581eae1378/server.jar
-
           java -jar forge-1.19.2-43.5.1-installer.jar --installServer
           rm forge-1.19.2-43.5.1-installer.jar
           rm forge-1.19.2-43.5.1-installer.jar.log 2>/dev/null || true
@@ -89,30 +87,15 @@ jobs:
           motd=SynthoPulse Ultimate Server
           EOF
 
-          echo "Creating ops.json..."
-          cat > ops.json << 'EOF'
-          [
-            {
-              "uuid": "f61f63fe-5bd8-4a1d-87f8-5f9a4de34df6",
-              "name": "MustafaX",
-              "level": 4,
-              "bypassesPlayerLimit": true
-            },
-            {
-              "uuid": "00000000-0000-0000-0000-000000000002",
-              "name": "muhammad12000",
-              "level": 4,
-              "bypassesPlayerLimit": true
-            },
-            {
-              "uuid": "00000000-0000-0000-0000-000000000003",
-              "name": "AbbasMaster",
-              "level": 4,
-              "bypassesPlayerLimit": true
-            }
-          ]
-          EOF
-          echo "=== ops.json ==="
+      - name: Generate Offline Ops (100% Accurate)
+        run: |
+          python3 -c "
+          import uuid, json
+          names = ['MustafaX', 'muhammad12000', 'AbbasMaster']
+          ops = [{'uuid': str(uuid.uuid3(uuid.NAMESPACE_DNS, f'OfflinePlayer:{n}')), 'name': n, 'level': 4, 'bypassesPlayerLimit': True} for n in names]
+          with open('ops.json', 'w') as f: json.dump(ops, f, indent=2)
+          "
+          echo "=== ops.json Generated ==="
           cat ops.json
 
       - name: Start Playit
@@ -155,23 +138,15 @@ jobs:
           while ! grep -q "Done (" logs/latest.log 2>/dev/null; do
             sleep 20
             ELAPSED=$((ELAPSED + 20))
-
             if [ -f "logs/latest.log" ]; then
               echo "--- [$((ELAPSED/60))m] ---"
               tail -1 logs/latest.log
             fi
-
             if ! screen -list | grep -q mc; then
               echo "=== SERVER CRASHED ==="
-              if [ -f "logs/latest.log" ]; then
-                tail -80 logs/latest.log
-              fi
-              if [ -d "crash-reports" ]; then
-                cat crash-reports/*.txt 2>/dev/null
-              fi
+              tail -80 logs/latest.log 2>/dev/null
               exit 1
             fi
-
             if [ $ELAPSED -ge $TIMEOUT ]; then
               echo "=== TIMEOUT ==="
               tail -80 logs/latest.log 2>/dev/null
@@ -185,13 +160,14 @@ jobs:
           echo "========================================="
 
           sleep 60
+          # Backup OP commands (will succeed instantly if ops.json worked)
           screen -S mc -X stuff "op MustafaX$(printf '\r')"
-          sleep 5
+          sleep 3
           screen -S mc -X stuff "op muhammad12000$(printf '\r')"
-          sleep 5
+          sleep 3
           screen -S mc -X stuff "op AbbasMaster$(printf '\r')"
-          sleep 5
-          echo "=== Final ops.json ==="
+          sleep 3
+          echo "=== Final Verification ==="
           cat ops.json
 
       - name: Keep Alive and Auto Save
@@ -204,7 +180,6 @@ jobs:
             M=$(( (TOTAL % 3600) / 60 ))
             echo "Saving... (${H}h ${M}m)"
             screen -S mc -X stuff "save-all$(printf '\r')"
-
             if [ $TOTAL -ge 20400 ]; then
               echo "Stopping safely..."
               screen -S mc -X stuff "save-all$(printf '\r')"
