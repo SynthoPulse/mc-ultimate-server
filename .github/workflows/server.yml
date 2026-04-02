@@ -17,6 +17,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
+          fetch-depth: 1
 
       - name: Install Java
         uses: actions/setup-java@v4
@@ -123,7 +124,7 @@ jobs:
 
           TIMEOUT=1500
           ELAPSED=0
-          while ! grep -q "Done" logs/latest.log 2>/dev/null; do
+          while ! grep -q "For help, type" logs/latest.log 2>/dev/null; do
             sleep 20
             ELAPSED=$((ELAPSED + 20))
 
@@ -155,7 +156,7 @@ jobs:
           echo "  Address: hard-wrapped.gl.joinmc.link"
           echo "========================================="
 
-          sleep 10
+          sleep 30
           screen -S mc -X stuff "op MustafaX$(printf '\r')"
           sleep 2
           screen -S mc -X stuff "op muhammad12000$(printf '\r')"
