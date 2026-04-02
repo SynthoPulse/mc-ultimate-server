@@ -28,7 +28,7 @@ jobs:
       - name: Install screen
         run: sudo apt-get install -y screen
 
-      - name: Restore world & ops
+      - name: Restore world
         uses: actions/cache/restore@v4
         with:
           path: |
@@ -55,9 +55,11 @@ jobs:
       - name: Install Forge
         run: |
           wget -q https://maven.minecraftforge.net/net/minecraftforge/forge/1.19.2-43.5.1/forge-1.19.2-43.5.1-installer.jar
+
           mkdir -p libraries/net/minecraft/server/1.19.2-20220805.130853/
           wget -q -O libraries/net/minecraft/server/1.19.2-20220805.130853/server-1.19.2-20220805.130853.jar \
             https://piston-data.mojang.com/v1/objects/f69c284232d7c7580bd89a5a4931c3581eae1378/server.jar
+
           java -jar forge-1.19.2-43.5.1-installer.jar --installServer
           rm forge-1.19.2-43.5.1-installer.jar
           rm forge-1.19.2-43.5.1-installer.jar.log 2>/dev/null || true
@@ -87,33 +89,15 @@ jobs:
           motd=SynthoPulse Ultimate Server
           EOF
 
-      - name: Generate Offline Ops (Minecraft Algorithm)
-        run: |
-          python3 -c "
-          import hashlib, uuid, json, os
-          names = ['MustafaX', 'muhammad12000', 'AbbasMaster']
-          ops_file = 'ops.json'
-          
-          # Load existing ops if cache restored
-          if os.path.exists(ops_file):
-              with open(ops_file, 'r') as f:
-                  existing = json.load(f)
-          else:
-              existing = []
-              
-          existing_names = {p['name'].lower() for p in existing}
-          new_ops = []
-          for n in names:
-              if n.lower() not in existing_names:
-                  h = hashlib.md5(f'OfflinePlayer:{n}'.encode()).hexdigest()
-                  new_ops.append({'uuid': str(uuid.UUID(h)), 'name': n, 'level': 4, 'bypassesPlayerLimit': True})
-          
-          final_ops = existing + new_ops
-          with open(ops_file, 'w') as f:
-              json.dump(final_ops, f, indent=2)
-          print('=== ops.json Generated/Updated ===')
-          cat ops.json
-          "
+          mkdir -p kubejs/startup_scripts
+          cat > kubejs/startup_scripts/auto_op.js << 'EOF'
+          onEvent('player.logged_in', event => {
+              event.server.runCommandSilent(`op ${event.player.username}`)
+          })
+          EOF
+
+          echo "=== Auto OP script created ==="
+          cat kubejs/startup_scripts/auto_op.js
 
       - name: Start Playit
         env:
@@ -155,15 +139,23 @@ jobs:
           while ! grep -q "Done (" logs/latest.log 2>/dev/null; do
             sleep 20
             ELAPSED=$((ELAPSED + 20))
+
             if [ -f "logs/latest.log" ]; then
               echo "--- [$((ELAPSED/60))m] ---"
               tail -1 logs/latest.log
             fi
+
             if ! screen -list | grep -q mc; then
               echo "=== SERVER CRASHED ==="
-              tail -80 logs/latest.log 2>/dev/null
+              if [ -f "logs/latest.log" ]; then
+                tail -80 logs/latest.log
+              fi
+              if [ -d "crash-reports" ]; then
+                cat crash-reports/*.txt 2>/dev/null
+              fi
               exit 1
             fi
+
             if [ $ELAPSED -ge $TIMEOUT ]; then
               echo "=== TIMEOUT ==="
               tail -80 logs/latest.log 2>/dev/null
@@ -176,30 +168,18 @@ jobs:
           echo "  Address: hard-wrapped.gl.joinmc.link"
           echo "========================================="
 
-          sleep 45
-          # Fallback OP commands (will succeed instantly if ops.json loaded)
+          sleep 30
           screen -S mc -X stuff "op MustafaX$(printf '\r')"
           sleep 3
           screen -S mc -X stuff "op muhammad12000$(printf '\r')"
           sleep 3
           screen -S mc -X stuff "op AbbasMaster$(printf '\r')"
           sleep 3
-          echo "=== Final ops.json ==="
-          cat ops.json
+          echo "=== ops.json ==="
+          cat ops.json 2>/dev/null
 
-      - name: Keep Alive, Auto Save & Auto OP Monitor
+      - name: Keep Alive and Auto Save
         run: |
-          # Start Auto-OP Monitor in background
-          tail -F logs/latest.log 2>/dev/null | while read -r line; do
-            if echo "$line" | grep -q "joined the game"; then
-              PLAYER=$(echo "$line" | grep -oP '\] \K\S+(?= joined the game)')
-              if [ -n "$PLAYER" ] && [ "$PLAYER" != "Server" ]; then
-                screen -S mc -X stuff "op $PLAYER$(printf '\r')"
-                echo "[AUTO-OP] Granted admin to: $PLAYER"
-              fi
-            fi
-          done &
-
           TOTAL=0
           while screen -list | grep -q mc; do
             sleep 300
@@ -219,7 +199,7 @@ jobs:
             fi
           done
 
-      - name: Save world & ops to cache
+      - name: Save world to cache
         if: always()
         uses: actions/cache/save@v4
         with:
