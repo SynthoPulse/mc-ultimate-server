@@ -55,6 +55,11 @@ jobs:
       - name: Install Forge
         run: |
           wget -q https://maven.minecraftforge.net/net/minecraftforge/forge/1.19.2-43.5.1/forge-1.19.2-43.5.1-installer.jar
+
+          mkdir -p libraries/net/minecraft/server/1.19.2-20220805.130853/
+          wget -q -O libraries/net/minecraft/server/1.19.2-20220805.130853/server-1.19.2-20220805.130853.jar \
+            https://piston-data.mojang.com/v1/objects/f69c284232d7c7580bd89a5a4931c3581eae1378/server.jar
+
           java -jar forge-1.19.2-43.5.1-installer.jar --installServer
           rm forge-1.19.2-43.5.1-installer.jar
           rm forge-1.19.2-43.5.1-installer.jar.log 2>/dev/null || true
@@ -124,7 +129,7 @@ jobs:
 
           TIMEOUT=1500
           ELAPSED=0
-          while ! grep -q "For help, type" logs/latest.log 2>/dev/null; do
+          while ! grep -q "Done (" logs/latest.log 2>/dev/null; do
             sleep 20
             ELAPSED=$((ELAPSED + 20))
 
