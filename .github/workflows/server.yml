@@ -69,8 +69,6 @@ jobs:
         run: |
           echo "=== Mods count ==="
           ls mods/*.jar 2>/dev/null | wc -l
-          echo "=== First 20 mods ==="
-          ls mods/*.jar 2>/dev/null | head -20
 
       - name: Configure server
         run: |
@@ -90,6 +88,34 @@ jobs:
           function-permission-level=4
           motd=SynthoPulse Ultimate Server
           EOF
+
+      - name: Setup Ops
+        run: |
+          echo "Creating ops.json..."
+          cat > ops.json << 'EOF'
+          [
+            {
+              "uuid": "f61f63fe-5bd8-4a1d-87f8-5f9a4de34df6",
+              "name": "MustafaX",
+              "level": 4,
+              "bypassesPlayerLimit": true
+            },
+            {
+              "uuid": "00000000-0000-0000-0000-000000000002",
+              "name": "muhammad12000",
+              "level": 4,
+              "bypassesPlayerLimit": true
+            },
+            {
+              "uuid": "00000000-0000-0000-0000-000000000003",
+              "name": "AbbasMaster",
+              "level": 4,
+              "bypassesPlayerLimit": true
+            }
+          ]
+          EOF
+          echo "=== ops.json created ==="
+          cat ops.json
 
       - name: Start Playit
         env:
@@ -124,7 +150,6 @@ jobs:
 
           echo "============================================"
           echo "  Waiting for server to start..."
-          echo "  Ultimate modpack needs 15-25 minutes..."
           echo "============================================"
 
           TIMEOUT=1500
@@ -161,12 +186,18 @@ jobs:
           echo "  Address: hard-wrapped.gl.joinmc.link"
           echo "========================================="
 
-          sleep 30
+          sleep 60
+
+          echo "Sending op commands..."
           screen -S mc -X stuff "op MustafaX$(printf '\r')"
-          sleep 2
+          sleep 5
           screen -S mc -X stuff "op muhammad12000$(printf '\r')"
-          sleep 2
+          sleep 5
           screen -S mc -X stuff "op AbbasMaster$(printf '\r')"
+          sleep 5
+
+          echo "=== Final ops.json ==="
+          cat ops.json 2>/dev/null
 
       - name: Keep Alive and Auto Save
         run: |
