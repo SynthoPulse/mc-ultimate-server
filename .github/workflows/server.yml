@@ -28,7 +28,7 @@ jobs:
       - name: Install screen
         run: sudo apt-get install -y screen
 
-      - name: Restore world
+      - name: Restore world & ops
         uses: actions/cache/restore@v4
         with:
           path: |
@@ -87,16 +87,33 @@ jobs:
           motd=SynthoPulse Ultimate Server
           EOF
 
-      - name: Generate Offline Ops (100% Accurate)
+      - name: Generate Offline Ops (Minecraft Algorithm)
         run: |
           python3 -c "
-          import uuid, json
+          import hashlib, uuid, json, os
           names = ['MustafaX', 'muhammad12000', 'AbbasMaster']
-          ops = [{'uuid': str(uuid.uuid3(uuid.NAMESPACE_DNS, f'OfflinePlayer:{n}')), 'name': n, 'level': 4, 'bypassesPlayerLimit': True} for n in names]
-          with open('ops.json', 'w') as f: json.dump(ops, f, indent=2)
-          "
-          echo "=== ops.json Generated ==="
+          ops_file = 'ops.json'
+          
+          # Load existing ops if cache restored
+          if os.path.exists(ops_file):
+              with open(ops_file, 'r') as f:
+                  existing = json.load(f)
+          else:
+              existing = []
+              
+          existing_names = {p['name'].lower() for p in existing}
+          new_ops = []
+          for n in names:
+              if n.lower() not in existing_names:
+                  h = hashlib.md5(f'OfflinePlayer:{n}'.encode()).hexdigest()
+                  new_ops.append({'uuid': str(uuid.UUID(h)), 'name': n, 'level': 4, 'bypassesPlayerLimit': True})
+          
+          final_ops = existing + new_ops
+          with open(ops_file, 'w') as f:
+              json.dump(final_ops, f, indent=2)
+          print('=== ops.json Generated/Updated ===')
           cat ops.json
+          "
 
       - name: Start Playit
         env:
@@ -159,19 +176,30 @@ jobs:
           echo "  Address: hard-wrapped.gl.joinmc.link"
           echo "========================================="
 
-          sleep 60
-          # Backup OP commands (will succeed instantly if ops.json worked)
+          sleep 45
+          # Fallback OP commands (will succeed instantly if ops.json loaded)
           screen -S mc -X stuff "op MustafaX$(printf '\r')"
           sleep 3
           screen -S mc -X stuff "op muhammad12000$(printf '\r')"
           sleep 3
           screen -S mc -X stuff "op AbbasMaster$(printf '\r')"
           sleep 3
-          echo "=== Final Verification ==="
+          echo "=== Final ops.json ==="
           cat ops.json
 
-      - name: Keep Alive and Auto Save
+      - name: Keep Alive, Auto Save & Auto OP Monitor
         run: |
+          # Start Auto-OP Monitor in background
+          tail -F logs/latest.log 2>/dev/null | while read -r line; do
+            if echo "$line" | grep -q "joined the game"; then
+              PLAYER=$(echo "$line" | grep -oP '\] \K\S+(?= joined the game)')
+              if [ -n "$PLAYER" ] && [ "$PLAYER" != "Server" ]; then
+                screen -S mc -X stuff "op $PLAYER$(printf '\r')"
+                echo "[AUTO-OP] Granted admin to: $PLAYER"
+              fi
+            fi
+          done &
+
           TOTAL=0
           while screen -list | grep -q mc; do
             sleep 300
@@ -180,6 +208,7 @@ jobs:
             M=$(( (TOTAL % 3600) / 60 ))
             echo "Saving... (${H}h ${M}m)"
             screen -S mc -X stuff "save-all$(printf '\r')"
+
             if [ $TOTAL -ge 20400 ]; then
               echo "Stopping safely..."
               screen -S mc -X stuff "save-all$(printf '\r')"
@@ -190,7 +219,7 @@ jobs:
             fi
           done
 
-      - name: Save world to cache
+      - name: Save world & ops to cache
         if: always()
         uses: actions/cache/save@v4
         with:
