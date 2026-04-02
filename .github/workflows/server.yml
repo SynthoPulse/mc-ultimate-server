@@ -28,6 +28,15 @@ jobs:
       - name: Install screen
         run: sudo apt-get install -y screen
 
+      - name: Add SWAP Memory
+        run: |
+          sudo fallocate -l 4G /swapfile
+          sudo chmod 600 /swapfile
+          sudo mkswap /swapfile
+          sudo swapon /swapfile
+          echo "=== Memory Info ==="
+          free -h
+
       - name: Restore world
         uses: actions/cache/restore@v4
         with:
