@@ -89,8 +89,6 @@ jobs:
           motd=SynthoPulse Ultimate Server
           EOF
 
-      - name: Setup Ops
-        run: |
           echo "Creating ops.json..."
           cat > ops.json << 'EOF'
           [
@@ -114,7 +112,7 @@ jobs:
             }
           ]
           EOF
-          echo "=== ops.json created ==="
+          echo "=== ops.json ==="
           cat ops.json
 
       - name: Start Playit
@@ -187,17 +185,14 @@ jobs:
           echo "========================================="
 
           sleep 60
-
-          echo "Sending op commands..."
           screen -S mc -X stuff "op MustafaX$(printf '\r')"
           sleep 5
           screen -S mc -X stuff "op muhammad12000$(printf '\r')"
           sleep 5
           screen -S mc -X stuff "op AbbasMaster$(printf '\r')"
           sleep 5
-
           echo "=== Final ops.json ==="
-          cat ops.json 2>/dev/null
+          cat ops.json
 
       - name: Keep Alive and Auto Save
         run: |
