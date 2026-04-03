@@ -111,7 +111,7 @@ jobs:
 
       - name: Start Minecraft Server
         run: |
-          screen -dmS mc java -Xmx4G -Xms4G \
+          screen -dmS mc java -Xmx5G -Xms2G \
             -XX:+UseG1GC \
             -XX:+ParallelRefProcEnabled \
             -XX:MaxGCPauseMillis=200 \
@@ -169,16 +169,6 @@ jobs:
           sleep 10
           screen -S mc -X stuff "op AbbasMaster$(printf '\r')"
           sleep 10
-
-          screen -S mc -X stuff "advancement revoke muhammad12000 everything$(printf '\r')"
-          sleep 5
-          screen -S mc -X stuff "clear muhammad12000$(printf '\r')"
-          sleep 5
-          screen -S mc -X stuff "xp set muhammad12000 0 levels$(printf '\r')"
-          sleep 5
-          screen -S mc -X stuff "effect clear muhammad12000$(printf '\r')"
-          sleep 5
-          echo "muhammad12000 has been reset!"
 
           TOTAL=0
           while screen -list | grep -q mc; do
